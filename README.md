@@ -1,1 +1,1 @@
-#DEDL
+# Distributed Evolutionary Deep Learning Seminar
