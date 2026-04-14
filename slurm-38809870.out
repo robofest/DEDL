@@ -1,0 +1,78 @@
+2026-04-11 23:42:42,825	INFO worker.py:2012 -- Started a local Ray instance.
+/jet/home/cchung2/.conda/envs/tf-gpu/lib/python3.9/site-packages/ray/_private/worker.py:2051: FutureWarning: Tip: In future versions of Ray, Ray will no longer override accelerator visible devices env var if num_gpus=0 or num_gpus=None (default). To enable this behavior and turn off this error message, set RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO=0
+  warnings.warn(
+[36m(GPUWorker pid=42489)[0m WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+[36m(GPUWorker pid=42489)[0m I0000 00:00:1775965369.126246   42489 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 78784 MB memory:  -> device: 0, name: NVIDIA H100 80GB HBM3, pci bus id: 0000:45:00.0, compute capability: 9.0
+[36m(GPUWorker pid=42489)[0m I0000 00:00:1775965372.516704   49246 device_compiler.h:196] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+[36m(GPUWorker pid=42493)[0m WARNING: All log messages before absl::InitializeLog() is called are written to STDERR[32m [repeated 7x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[36m(GPUWorker pid=42493)[0m I0000 00:00:1775965372.398164   42493 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 78784 MB memory:  -> device: 0, name: NVIDIA H100 80GB HBM3, pci bus id: 0000:c2:00.0, compute capability: 9.0[32m [repeated 7x across cluster][0m
+[36m(pid=gcs_server)[0m [2026-04-11 23:43:12,014 E 42127 42127] (gcs_server) gcs_server.cc:302: Failed to establish connection to the event+metrics exporter agent. Events and metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(GPUWorker pid=42488)[0m I0000 00:00:1775965375.625944   51092 device_compiler.h:196] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.[32m [repeated 7x across cluster][0m
+[33m(raylet)[0m [2026-04-11 23:43:12,760 E 42372 42372] (raylet) main.cc:975: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(GPUWorker pid=42487)[0m [2026-04-11 23:43:13,545 E 42487 42833] core_worker_process.cc:825: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[2026-04-11 23:43:14,340 E 42059 42486] core_worker_process.cc:825: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(pid=42639)[0m [2026-04-11 23:43:14,332 E 42639 48639] core_worker_process.cc:825: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14[32m [repeated 103x across cluster][0m
+
+=== Generation 0 ===
+{'units1': 32, 'units2': 32, 'lr': 0.0001} → Loss: 81.020630
+{'units1': 64, 'units2': 128, 'lr': 0.001} → Loss: 0.095144
+{'units1': 128, 'units2': 128, 'lr': 0.001} → Loss: 0.026679
+{'units1': 32, 'units2': 32, 'lr': 0.005} → Loss: 0.038098
+{'units1': 32, 'units2': 32, 'lr': 0.005} → Loss: 0.069538
+{'units1': 32, 'units2': 32, 'lr': 0.01} → Loss: 0.023939
+{'units1': 64, 'units2': 64, 'lr': 0.0001} → Loss: 38.552219
+{'units1': 32, 'units2': 64, 'lr': 0.0001} → Loss: 55.232780
+Best (gen): {'units1': 32, 'units2': 32, 'lr': 0.01} | Loss: 0.023939
+Best (global): {'units1': 32, 'units2': 32, 'lr': 0.01} | Loss: 0.023939
+
+=== Generation 1 ===
+{'units1': 32, 'units2': 32, 'lr': 0.01} → Loss: 0.025872
+{'units1': 128, 'units2': 128, 'lr': 0.001} → Loss: 0.038971
+{'units1': 128, 'units2': 128, 'lr': 0.005} → Loss: 0.011298
+{'units1': 32, 'units2': 64, 'lr': 0.001} → Loss: 0.088165
+{'units1': 32, 'units2': 32, 'lr': 0.001} → Loss: 0.189911
+{'units1': 128, 'units2': 128, 'lr': 0.005} → Loss: 0.011630
+{'units1': 64, 'units2': 64, 'lr': 0.005} → Loss: 0.019106
+{'units1': 128, 'units2': 32, 'lr': 0.01} → Loss: 0.008187
+Best (gen): {'units1': 128, 'units2': 32, 'lr': 0.01} | Loss: 0.008187
+Best (global): {'units1': 128, 'units2': 32, 'lr': 0.01} | Loss: 0.008187
+
+=== Generation 2 ===
+{'units1': 128, 'units2': 32, 'lr': 0.01} → Loss: 0.011514
+{'units1': 128, 'units2': 128, 'lr': 0.005} → Loss: 0.012311
+{'units1': 64, 'units2': 128, 'lr': 0.01} → Loss: 0.008947
+{'units1': 128, 'units2': 64, 'lr': 0.01} → Loss: 0.008237
+{'units1': 32, 'units2': 128, 'lr': 0.005} → Loss: 0.026687
+{'units1': 128, 'units2': 64, 'lr': 0.01} → Loss: 0.010524
+{'units1': 128, 'units2': 32, 'lr': 0.005} → Loss: 0.012944
+{'units1': 32, 'units2': 128, 'lr': 0.005} → Loss: 0.035413
+Best (gen): {'units1': 128, 'units2': 64, 'lr': 0.01} | Loss: 0.008237
+Best (global): {'units1': 128, 'units2': 32, 'lr': 0.01} | Loss: 0.008187
+
+=== Generation 3 ===
+{'units1': 128, 'units2': 64, 'lr': 0.01} → Loss: 0.009090
+{'units1': 64, 'units2': 128, 'lr': 0.01} → Loss: 0.010709
+{'units1': 64, 'units2': 128, 'lr': 0.01} → Loss: 0.012985
+{'units1': 32, 'units2': 64, 'lr': 0.01} → Loss: 0.007636
+{'units1': 128, 'units2': 32, 'lr': 0.01} → Loss: 0.009149
+{'units1': 32, 'units2': 64, 'lr': 0.01} → Loss: 0.014612
+{'units1': 32, 'units2': 64, 'lr': 0.01} → Loss: 0.017085
+{'units1': 32, 'units2': 128, 'lr': 0.01} → Loss: 0.016857
+Best (gen): {'units1': 32, 'units2': 64, 'lr': 0.01} | Loss: 0.007636
+Best (global): {'units1': 32, 'units2': 64, 'lr': 0.01} | Loss: 0.007636
+
+=== Generation 4 ===
+{'units1': 32, 'units2': 64, 'lr': 0.01} → Loss: 0.012398
+{'units1': 128, 'units2': 64, 'lr': 0.01} → Loss: 0.000222
+{'units1': 128, 'units2': 64, 'lr': 0.01} → Loss: 0.009321
+{'units1': 32, 'units2': 32, 'lr': 0.01} → Loss: 0.012501
+{'units1': 128, 'units2': 128, 'lr': 0.01} → Loss: 0.006172
+{'units1': 128, 'units2': 128, 'lr': 0.01} → Loss: 0.009427
+{'units1': 32, 'units2': 32, 'lr': 0.01} → Loss: 0.020955
+{'units1': 128, 'units2': 128, 'lr': 0.01} → Loss: 0.006072
+Best (gen): {'units1': 128, 'units2': 64, 'lr': 0.01} | Loss: 0.000222
+Best (global): {'units1': 128, 'units2': 64, 'lr': 0.01} | Loss: 0.000222
+
+=== FINAL RESULT ===
+Best individual found: {'units1': 128, 'units2': 64, 'lr': 0.01}
+Best loss: 0.000222
